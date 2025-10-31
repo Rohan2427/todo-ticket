@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // MongoDB Connection
-mongoose.connect('mongodb://admin:yourpassword@localhost:27017/todo-app?authSource=admin', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://admin:rs@12345@localhost:27017/todo-app?authSource=admin', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Todo Schema
 const Todo = mongoose.model('Todo', { text: String, completed: Boolean });
